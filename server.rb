@@ -5,20 +5,12 @@ get "/" do
 	erb(:home)
 end
 
-get "/add" do
- 	erb(:add)
-end
-
 post "/calculate_add" do
 	number_1 = params[:first_number]
 	number_2 = params[:second_number]
 	my_addition = Calculator.new
 	@result = my_addition.add(number_1, number_2)
 	erb(:result_add)
-end
-
-get "/substract" do
-	erb(:substract)
 end
 
 post "/calculate_substract" do
@@ -29,20 +21,12 @@ post "/calculate_substract" do
 	erb(:result_substract)
 end
 
-get "/multiply" do
-	erb(:multiply)
-end
-
 post "/calculate_multiply" do
 	number_1 = params[:first_number]
 	number_2 = params[:second_number]
 	my_multiplication = Calculator.new
 	@result = my_multiplication.multiply(number_1, number_2)
 	erb(:result_multiply)
-end
-
-get "/divide" do
-	erb(:divide)
 end
 
 post "/calculate_divide" do
